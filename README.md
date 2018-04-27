@@ -40,8 +40,8 @@ def task(hash, datum):
 
 simd = quicksimd.Simd(setup, task)
 
-# use 5 threads
-simd.run(5)
+# use 5 threads, provide hashing function to setup
+simd.run(5, md5sum)
 
 # fill the queue, processing starts with the first element being put
 for x in data:
