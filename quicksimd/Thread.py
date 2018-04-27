@@ -26,7 +26,7 @@ class Simd:
             if not result == None:
                 self.outq.put(result)
 
-    def run(self, num, static):
+    def run(self, num, static=None):
         """run
 
         start task execution
